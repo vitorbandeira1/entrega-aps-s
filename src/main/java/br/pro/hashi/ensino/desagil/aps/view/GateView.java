@@ -22,7 +22,7 @@ public class GateView extends FixedPanel implements ItemListener, MouseListener 
 
 
     public GateView(Gate gate) {
-        super(250, 250);
+        super();
         this.gate = gate;
 
         entrada1 = new JCheckBox();
@@ -46,25 +46,24 @@ public class GateView extends FixedPanel implements ItemListener, MouseListener 
         repaint();
 
 
-
         if (gate.toString().equals("NOT")) {
 
-            add(entrada1, 25, 102, 20, 25);
-            add(entrada2, 85, 45, 20, 25);
+            add(entrada1, 25, 102);
+            add(entrada2, 85, 45);
 
 
         } else if (gate.toString().equals("OR")) {
 
 
-            add(entrada1, 30, 67, 20, 25);
-            add(entrada2, 30, 137, 20, 25);
+            add(entrada1, 30, 67);
+            add(entrada2, 30, 137);
 
 
         } else {
 
 
-            add(entrada1, 30, 72, 20, 25);
-            add(entrada2, 30, 132, 20, 25);
+            add(entrada1, 30, 72);
+            add(entrada2, 30, 132);
 
 
         }
@@ -134,6 +133,9 @@ public class GateView extends FixedPanel implements ItemListener, MouseListener 
                 Color color = JColorChooser.showDialog(this, null, light.getColor());
                 light.setColor(color);
 
+//                Color offColor = JColorChooser.showDialog(this, null, light.getOffColor());
+//                light.setOffColor(offColor);
+
 
                 repaint();
             }
@@ -144,6 +146,9 @@ public class GateView extends FixedPanel implements ItemListener, MouseListener 
 
                 Color color = JColorChooser.showDialog(this, null, light.getColor());
                 light.setColor(color);
+
+//                Color offColor = JColorChooser.showDialog(this, null, light.getOffColor());
+//                light.setOffColor(offColor);
 
                 repaint();
 

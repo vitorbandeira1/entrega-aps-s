@@ -14,7 +14,9 @@ public abstract class Gate implements Emitter, Receiver {
         return name;
     }
 
-    public int getInputSize() {
-        return inputSize;
-    }
+// --Commented out by Inspection START (18/05/2020 17:50):
+//    public int getInputSize() {
+//        return inputSize;
+//    }
+// --Commented out by Inspection STOP (18/05/2020 17:50)
 }
