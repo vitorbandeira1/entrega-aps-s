@@ -3,11 +3,13 @@ package br.pro.hashi.ensino.desagil.aps.model;
 import java.awt.*;
 
 public class Light implements Receiver {
-    private Color color;
+    private Color color, offcolor;
+//    private offColor offcolor;
     private Emitter emitter;
 
     public Light(int r, int g, int b) {
         color = new Color(r, g, b);
+        offcolor = new offColor(r, g, b);
         emitter = null;
     }
 

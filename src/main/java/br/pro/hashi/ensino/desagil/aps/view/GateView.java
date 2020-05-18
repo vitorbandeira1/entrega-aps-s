@@ -42,26 +42,29 @@ public class GateView extends FixedPanel implements ItemListener, MouseListener 
 //        saida.setSelected(false);
 
         light = new Light(255, 0, 0);
+        light.connect(0, this.gate);
+        repaint();
+
 
 
         if (gate.toString().equals("NOT")) {
 
-            add(entrada1, 25, 102, 150, 25);
-            add(entrada2, 85, 45, 150, 25);
+            add(entrada1, 25, 102, 20, 25);
+            add(entrada2, 85, 45, 20, 25);
 
 
         } else if (gate.toString().equals("OR")) {
 
 
-            add(entrada1, 30, 67, 150, 25);
-            add(entrada2, 30, 137, 150, 25);
+            add(entrada1, 30, 67, 20, 25);
+            add(entrada2, 30, 137, 20, 25);
 
 
         } else {
 
 
-            add(entrada1, 30, 72, 150, 25);
-            add(entrada2, 30, 132, 150, 25);
+            add(entrada1, 30, 72, 20, 25);
+            add(entrada2, 30, 132, 20, 25);
 
 
         }
@@ -111,7 +114,6 @@ public class GateView extends FixedPanel implements ItemListener, MouseListener 
         }
 
 
-        light.connect(0, this.gate);
         repaint();
     }
 
